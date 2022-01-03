@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test-2</title>
+
+        
+    </head>
+    <body>
+        <h2 style="color: green;">ADMISSION <span style="color:blue">FORM</span></h2>
+        <section class="contact-form">         
+          <form>         
+             
+            <br />
+            <div class="input-group">
+              <label for="FirstName">FirstName</label>
+              <input id="FirstName" name="FirstName" type="text" placeholder="FirstName"/>
+            </div>
+ 
+            <br />
+            <div class="input-group">
+                <label for="LastName">LastName</label>
+                <input id="LastName" name="LastName" type="text"  placeholder="LastName"/>
+              </div>
+             
+              <br />
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Email"/>
+            </div>
+ 
+            <br />
+            <div class="input-group">
+                <label for="mobilenumber">MobileNumber</label>
+                <input id="MobileNumber" name="mobilenumber" type="mobilenumber" maxlength="10"/>
+              </div>
+              
+
+              <br />
+              <div class="input-group">
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" placeholder="Address"/>
+              </div>
+
+              <br />
+              <div class="input-group">
+                <label>Gender:    &nbsp;&nbsp;</label>
+              <label for="male">Male</label>
+              <input id="male" name="Male" type="radio"/>
+              &nbsp;&nbsp;
+              <label for="female">Female</label>
+              <input id="female" name="Female" type="radio"/>
+            </div>
+              <br />
+              <div class="input-group">
+                  <label for="date">DOB</label>
+                  <input id="DOB" name="DOB" type="date"/>
+                </div>
+                <br />
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input id="city" name="City" type="text"/>
+                  </div>
+
+      <br/>
+                    <!----- Qualification---------------------------------------------------------->
+<tr>
+    <td>QUALIFICATION </td>
+     
+    <td>
+    <table>
+     
+    <tr>
+    <td align="center"><b>Sl.No.</b></td>
+    <td align="center"><b>Examination</b></td>
+    <td align="center"><b>Board</b></td>
+    <td align="center"><b>Percentage</b></td>
+    <td align="center"><b>Year of Passing</b></td>
+    </tr>
+     
+    <tr>
+    <td>1</td>
+    <td>Class X</td>
+    <td><input type="text" name="ClassX_Board" maxlength="30" /></td>
+    <td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
+    <td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+    </tr>
+     
+    <tr>
+    <td>2</td>
+    <td>Class XII</td>
+    <td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
+    <td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
+    <td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+    </tr>
+     
+    <tr>
+    <td>3</td>
+    <td>Graduation</td>
+    <td><input type="text" name="Graduation_Board" maxlength="30" /></td>
+    <td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
+    <td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
+    </tr>
+
+    </table>
+     
+    </td>
+    </tr>
+                </div>
+
+                <br />
+                  
+                <div class="input-group">
+                  <label>Course Applied For: &nbsp; &nbsp;   </label>
+                <label for="mern">MERN &nbsp;</label>
+                <input id="mern" name="mern" type="radio"/>
+  
+                <label for="JFS"> &nbsp;JAVA FULL STACK</label>
+                <input id="JFS" name="JFS" type="radio"/>
+
+            
+                </div>
+
+               
+              
+            
+           
+              <br />
+            <button type="submit" style="color:blue">Submit</button>
+          </form>
+        </section>
+        
+        <div class="results">
+          <h2>Form Data</h2>
+         
+          <pre></pre>
+        </div>
+    </body>
+
+
+    <script>
+        function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  const data = new FormData(event.target);
+  
+  const formJSON = Object.fromEntries(data.entries());
+
+  // for multi-selects, we need special handling
+
+  
+  const results = document.querySelector('.results pre');
+  results.innerText = JSON.stringify(formJSON, null, 1);
+
+  console.log("1",results.innerText)
+
+}
+
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', handleFormSubmit);
+    </script>
+
+</html>
