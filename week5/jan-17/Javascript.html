@@ -1,0 +1,36 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <h2>split() </h2>
+        <p>The split() method splits a string into an array of substrings. The split() method returns the new array. The split() method does not change the original string</p>
+            <hr >
+        <h2>join()</h2>
+        <p>The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.</p>
+        <hr >
+        <h2>Sort()</h2>
+        <p>The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values</p>
+    
+        <h2>Anagrams</h2>
+
+        <script>
+function checkStringsAnagram(a, b) {
+   let len1 = a.length;
+   let len2 = b.length;
+   if(len1 !== len2){
+      console.log('Invalid Input');
+      return
+   }
+   let str1 = a.split('').sort().join('');
+   let str2 = b.split('').sort().join('');
+   if(str1 === str2){
+      console.log("True");
+   } else { 
+      console.log("False");
+   }
+}
+checkStringsAnagram("elbow","below")
+        </script>
+    </body>
+</html>
