@@ -1,0 +1,43 @@
+button{
+    border-radius: 5px;
+    border: 1px solid aquamarine;
+    height: 30px;
+    width: 80px;
+    background: white;
+  }
+
+h4{
+    color: red;
+}
+
+  
+  td{
+    border:1px solid aquamarine;
+    text-align: center;
+    height: 30px;
+    font-family: sans-serif;
+    border-radius: 5px;
+  }
+  
+  h1{
+    color: aquamarine;
+  }
+  
+  table{
+    margin-top: 50px;
+    width: 700px;
+  }
+  
+  button:hover{
+    color: white;
+    background: aquamarine;
+  }
+  
+  .inp-search{
+    border: 1px solid aquamarine;
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+  }
